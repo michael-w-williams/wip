@@ -1,6 +1,6 @@
 
-# Fn Function Development with Context Data
-The Fn context stores configuration information about your functions, your Fn server and the location of your Docker images. You can also use a context to store application data as name/value pairs. The context data can be passed and used within your function. For this tutorial, let's do the following:
+# Access Variable data from your Fn Context
+Data can be passed to an Fn function via its main stdin payload. In addition, Fn FDKs provides a runtime context which you can use to pass name/value data to your function. This configuration data can be stored for your application, your function, or provided by the environment. In this tutorial, we explore options for passing and using configuration data in your function.  For this tutorial, let's do the following:
 
 * Set up your default context [as described in the install tutorial](https://github.com/fnproject/tutorials/blob/master/install/README.md#configure-your-context). 
 * Configure a new context to store images on Docker Hub. Use this context to store data needed for your function.
