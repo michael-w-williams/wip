@@ -1,14 +1,20 @@
 
 # Access Variable data from your Fn Context
-Data can be passed to an Fn function via its main stdin payload. In addition, Fn FDKs provides a runtime context which you can use to pass name/value data to your function. This configuration data can be stored for your application, your function, or provided by the environment. In this tutorial, we explore options for passing and using configuration data in your function.  For this tutorial, let's do the following:
+Normally, data is passed to an Fn function via standard input. However, Fn FDKs also provide a runtime context which you can use to pass name/value data to your function. This configuration data can be stored for your application, your function, or provided by the environment. In this tutorial, we explore options for passing and using configuration data in your function.
+
+For this tutorial, let's do the following:
 
 * Set up your default context [as described in the install tutorial](https://github.com/fnproject/tutorials/blob/master/install/README.md#configure-your-context). 
 * Configure a new context to store images on Docker Hub. Use this context to store data needed for your function.
-* Create a function that accesses the context data.
+* Explore accessing configuration data from different sources.
+    * Application variables
+    * Function variables
+    * Fn provided runtime environment variables
+
 
 ## Before you Begin
 
-* Set aside about 20 minutes to complete this tutorial.
+* Set aside about 30 minutes to complete this tutorial.
 * Make sure the Fn server is up and running on your computer, see [Install Fn](../../install/README.md) for more details.
 * Have your Docker Hub credentials handy.
 
@@ -96,7 +102,70 @@ Go to your function directory.
 > cd javafn
 >```
 
+If you look in the `src/main/java/com/example/fn/` directory you find the `HelloFunction.java` file.
+
+```java
+package com.example.fn;
+
+public class HelloFunction {
+
+    public String handleRequest(String input) {
+        String name = (input == null || input.isEmpty()) ? "world"  : input;
+
+        return "Hello, " + name + "!";
+    }
+
+}
+```
+This is the standard Java boiler plate Hello World function.
+
+
 ### Modify the HelloFunction
+Next, we modify the boilerplate Java Hello World function to display the configuration data we provide. Update the function to look like this:
+
+```java
+package com.example.fn;
+
+import com.fnproject.fn.api.FnConfiguration;
+import com.fnproject.fn.api.RuntimeContext;
+
+
+public class HelloFunction {
+	/* Vars for Env Variables */
+	private String dbHost;		// DB_HOST
+	private String dbUser;		// DB_USER
+	private String dbPassword;	// DB_PASSWORD
+	
+	@FnConfiguration
+	public void config(RuntimeContext ctx) {
+		
+		dbHost = ctx.getConfigurationByKey("DB_HOST").orElse("//localhost/DBName");
+		
+		dbUser = ctx.getConfigurationByKey("DB_USER").orElse("your-db-account");
+				
+		dbPassword = ctx.getConfigurationByKey("DB_PASSWORD").orElse("your-db-password");
+		
+	}
+	
+    public String handleRequest(String input) {
+    	String resultStr = "";
+        String name = (input == null || input.isEmpty()) ? "world"  : input;
+
+        resultStr = resultStr + "Hello " + name + "!\n";
+        resultStr = resultStr + "JDBC Host: " + dbHost + "\n";
+        resultStr = resultStr + "JDBC User: " + dbUser + "\n";
+        resultStr = resultStr + "JDBC Passwd: " + dbPassword + "\n";
+        
+        return resultStr;
+    }
+}
+```
+
+So now the function is looking for three values we provided from the runtime context.
+
+* `DB_HOST` - The hostname and database name we are connecting to.
+* `DB_USER` - The user name we are logging in with.
+* `DB_PASSWORD` - The password we are providing to the server to log in.
 
 
 
