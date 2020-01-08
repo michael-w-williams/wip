@@ -1,10 +1,10 @@
-# Configuration Variables
+# Using Configuration Variables in your Functions
+In addition to the normal variables you use in function creation, Fn allows you to pass configuration data, created with the CLI, into your function.  This data along with other automatically generated information are converted into environment variables and are made available to your function's context. This tutorial covers how to set your own configuration variables and now to use them in a function.
 
-You can get configuration variables into a function and make them available as environment variables.
+## Function Scenario
+The `configuration-variables` function creates a database connection string. This function has three variables: `DB_HOST_URL`, `DB_USER`, and `DB_PASSWORD`.
 
-The `configuration-variables` function creates a database connection string. This function has four variables: `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD`.
-
-The `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels.
+The `DB_HOST_URL`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels.
 For example, the value of the `DB_DRIVER` variable is read from the `func.yaml` file in the `config` key. The `DB_URL` and `DB_USER`
 environment variables are set in the application configuration level, and the `DB_PASSWORD` environment variable is set in the
 function configuration level.
@@ -73,11 +73,11 @@ import com.fnproject.fn.api.FnConfiguration;
 import com.fnproject.fn.api.RuntimeContext;
 
 
-public class Connection {			
+public class Connection {
 	private String url;
 	private String driver;
 	private String user;
-	private String password;  
+	private String password;
 
 	@FnConfiguration
     public void config(RuntimeContext ctx) {
