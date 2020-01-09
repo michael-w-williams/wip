@@ -2,7 +2,23 @@
 In addition to the normal variables you use in function creation, Fn allows you to pass configuration data, created with the CLI, into your function.  This data along with other automatically generated information are converted into environment variables and are made available to your function's context. This tutorial covers how to set your own configuration variables and now to use them in a function.
 
 ## Function Scenario
-The `configuration-variables` function creates a database connection string. This function has three variables: `DB_HOST_URL`, `DB_USER`, and `DB_PASSWORD`.
+In this tutorial, you create a `config-vars` function that displays configuration data passed to the function. For the example, let's use some database information that we might need in a function. 
+
+* `DB_HOST_URL` displays the hostname and path to the database.
+* `DB_USER` is the user name used to connect to the datbase.
+* `DB_PASSWORD` is the password for our database user.
+
+## What Contexts are Available for my Function?
+There are several Fn spaces where you put and get data for your function.
+
+* Application space: 
+* Function space:
+* Default space:
+
+### Default Space
+Put list of auto generated vars here.
+
+### Discuss what Data we will Get here
 
 The `DB_HOST_URL`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels.
 For example, the value of the `DB_DRIVER` variable is read from the `func.yaml` file in the `config` key. The `DB_URL` and `DB_USER`
@@ -11,6 +27,8 @@ function configuration level.
 
 ## Step by step: Set the configuration values
 Ensure you have the Fn server running to host your function.
+
+### Break this up by variables so we can test each part.
 
 (1) Start the server.
 
@@ -60,7 +78,14 @@ $ fn invoke connection-app connection
 driver: mysqlDriver; url: jdbc:mysql; user: superadmin; password: superadmin
 ```
 
-## Code walkthrough
+## Code walkthrough: Should move before steps
+
+### Add func.yaml
+
+
+### Update Function for new context above
+
+
 
 The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
 It is set to `com.example.fn.Connection::getConnection`. The whole class
