@@ -1,15 +1,15 @@
 # Using Configuration Variables in your Functions
-In addition to the normal variables you use in function creation, Fn allows you to pass configuration data, created with the CLI, into your function.  This data along with other automatically generated information are converted into environment variables and are made available to your function's context. This tutorial covers how to set your own configuration variables and now to use them in a function.
+In addition to the normal variables you use in function creation, Fn allows you to pass configuration data, created with the CLI, into your function.  This data, along with other automatically generated information, is converted into environment variables and are made available to your function's context. This tutorial covers how to set your own configuration variables and now to use them in a function.
 
 ## Function Scenario
-In this tutorial, you create a `config-vars` function that displays configuration data passed to the function. For the example, let's use some database information that we might need in a function. 
+In this tutorial, you create a `config-vars` function that displays configuration data passed to the function. For the example, let's use some database information that we might need in a function.
 
 * `DB_HOST_URL` displays the hostname and path to the database.
-* `DB_USER` is the user name used to connect to the datbase.
+* `DB_USER` is the user name used to connect to the database.
 * `DB_PASSWORD` is the password for our database user.
 
 ## What Contexts are Available for my Function?
-There are several Fn spaces where you put and get data for your function.
+There are several Fn variable spaces where you put and get data for your function.
 
 * Application space: 
 * Function space:
