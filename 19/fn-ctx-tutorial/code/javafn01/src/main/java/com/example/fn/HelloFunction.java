@@ -13,7 +13,7 @@ public class HelloFunction {
 	@FnConfiguration
 	public void config(RuntimeContext ctx) {
 		
-		dbHost = ctx.getConfigurationByKey("DB_HOST").orElse("//localhost/DBName");
+		dbHost = ctx.getConfigurationByKey("DB_HOST_URL").orElse("//localhost/DBName");
 		
 		dbUser = ctx.getConfigurationByKey("DB_USER").orElse("your-db-account");
 				
@@ -26,9 +26,9 @@ public class HelloFunction {
         String name = (input == null || input.isEmpty()) ? "world"  : input;
 
         resultStr = resultStr + "Hello " + name + "!\n";
-        resultStr = resultStr + "JDBC Host: " + dbHost + "\n";
-        resultStr = resultStr + "JDBC User: " + dbUser + "\n";
-        resultStr = resultStr + "JDBC Passwd: " + dbPassword + "\n";
+        resultStr = resultStr + "DB Host URL: " + dbHost + "\n";
+        resultStr = resultStr + "DB User: " + dbUser + "\n";
+        resultStr = resultStr + "DB Passwd: " + dbPassword + "\n";
         
         return resultStr;
     }

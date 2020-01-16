@@ -8,20 +8,21 @@ In this tutorial, you create a `config-vars` function that displays configuratio
 * `DB_USER` is the user name used to connect to the database.
 * `DB_PASSWORD` is the password for our database user.
 
-## What Contexts are Available for my Function?
+## What Variable Spaces are Available for my Function?
 There are several Fn variable spaces where you put and get data for your function.
 
-* Application space: 
-* Function space:
-* Default space:
+* **Application space:** Variables stored in an application are available to all functions that are deployed to that application.
+    * Example: 
+* **Function space:** Variables stored for a function are only available to that function.
+* **Default space:** By default, a number of environment variables are automatically generated in an Fn Docker image. The section that follows details the automatically generated variables.
 
-### Default Space
-Put list of auto generated vars here.
+#### Default Space Variables
+Here is the list of automatically generated variables in the default space that are available to your functions.
 
 |Fn Generated Var|Sample Value|Description|
 |----------------|------------|-----------|
 |[FN_APP_ID]|01NNNNNNNNNG8G00GZJ0000001|The application ID for the app the current function is contained in.|
-|[FN_FN_ID]|01DYN92RDFNG8G00GZJ0000002|The ID of the current function|
+|[FN_FN_ID]|01DYNNNNNNNG8G00GZJ0000002|The ID of the current function|
 |[FN_FORMAT]|http-stream|(Deprecated). Communications protocol.|
 |[FN_LISTENER]|unix:/tmp/iofs/lsnr.sock|The Unix socket address (prefixed with "unix:") on the file system that the FDK should create to listen for requests. The platform will guarantee that this directory is writable to the function. FDKs must not write any other data than the unix socket to this directory.|
 |[FN_MEMORY]|128|The maximum memory of the function in MB.|
@@ -56,10 +57,10 @@ $ cd configuration-variables
 (3) Create an app for the function.
 
 ```sh
-$ fn create app connection-app
+$ fn c app cfg-app
 ```
 
-(4) At the application level, configure the `DB_URL` environment variable.
+(4) At the application level, configure the `DB_HOST_URL` environment variable.
 
 ```sh
 $ fn config app connection-app DB_URL jdbc:mysql
