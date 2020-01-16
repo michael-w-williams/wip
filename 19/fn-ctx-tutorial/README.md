@@ -18,6 +18,17 @@ There are several Fn variable spaces where you put and get data for your functio
 ### Default Space
 Put list of auto generated vars here.
 
+|Fn Generated Var|Sample Value|Description|
+|----------------|------------|-----------|
+|[FN_APP_ID]|01NNNNNNNNNG8G00GZJ0000001|The application ID for the app the current function is contained in.|
+|[FN_FN_ID]|01DYN92RDFNG8G00GZJ0000002|The ID of the current function|
+|[FN_FORMAT]|http-stream|(Deprecated). Communications protocol.|
+|[FN_LISTENER]|unix:/tmp/iofs/lsnr.sock|The Unix socket address (prefixed with "unix:") on the file system that the FDK should create to listen for requests. The platform will guarantee that this directory is writable to the function. FDKs must not write any other data than the unix socket to this directory.|
+|[FN_MEMORY]|128|The maximum memory of the function in MB.|
+|[FN_TYPE]|sync|The type of function. Always `sync` currently.|
+
+
+
 ### Discuss what Data we will Get here
 
 The `DB_HOST_URL`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels.
