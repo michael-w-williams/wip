@@ -1,4 +1,4 @@
-# Using Configuration Variables in your Functions
+# Using CLI Variables in your Functions
 In addition to the normal variables you use in function creation, Fn allows you to pass configuration data, created with the CLI, into your function.  This data, along with other automatically generated information, is converted into environment variables and are made available to your function's context. This tutorial covers how to set your own configuration variables and how to use them in a function.
 
 ## Function Scenario
