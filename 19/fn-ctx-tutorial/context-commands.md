@@ -21,7 +21,8 @@ The following sections provide definitions and examples of all the Fn commands r
 ### Cheat Sheet
 * Create: `fn c ctx <context-name> --api-url http://<host>:<port> --registry <docker-hub-id>`
 * Delete: `fn d ctx <context-name>`
-* List: `fn ls <context-name>`
+* List: `fn i ctx <context-name>`
+* List all: `fn ls ctx`
 * Update (Add) Name/Value: `fn up ctx <key> <value>`
 * Update (Delete) Name/Value: `fn up ctx --delete <key>`
 
@@ -53,6 +54,8 @@ Here are the steps to setup a new context.
     * `fn delete context <context-name>`
 * **List** all contexts on this system.
     * `fn list <context-name>`
+* **List** a single context's settings.
+    * `fn i ctx <context-name>`
 * **Add or Update** key/value data in your context.
     * `fn update context <key> <value>`
 * **Update (Delete)** a name/value pair from your context.

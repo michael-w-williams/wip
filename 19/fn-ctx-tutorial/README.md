@@ -17,7 +17,6 @@ perform an action.
 There are several Fn variable spaces where you put and get data for your function.
 
 * **Application space:** Variables stored in an application are available to all functions that are deployed to that application.
-    * Example: 
 * **Function space:** Variables stored for a function are only available to that function.
 * **Default space:** By default, a number of environment variables are automatically generated in an Fn Docker image. The section that follows details the automatically generated variables.
 
@@ -99,7 +98,7 @@ DB_HOST_URL	//myhost/mydb
 
 (8) Modify the "Hello World!" boiler plate example (located in src -> main -> java -> com -> example -> fn -> HelloFunction.java) as described in the next section.
 
-(9) Deploy and invoke your function locally.
+(9) Deploy and invoke your function locally. (**Note:** You must complete the code changes described in the next section to get the output shown.)
 
 ![User input icon](images/userinput.png)
 ```sh
@@ -162,13 +161,19 @@ public class HelloFunction {
 }
 ```
 
-First,
+First, we import a couple of FDK for Java classes.
 
 ```java
 import com.fnproject.fn.api.FnConfiguration;
 import com.fnproject.fn.api.RuntimeContext;
 ```
 
+The `com.fnproject.fn.api.FnConfiguration` class allows you to annotate methods to be used for configuration. This allows you to setup and configure variables before the `handleRequest` method is run.
+
+The `com.fnproject.fn.api.RuntimeContext` class gives you access to the environment variables set automatically or created by the Fn CLI. We can pass a `RuntimeContext` variable to a method and gain access to all the available environment variables.
+
+
+The following method is an example of how the `RuntimeContext` can be passed to a method and used to initialize data.
 
 ```java
 @FnConfiguration
@@ -183,98 +188,65 @@ public void config(RuntimeContext ctx) {
 }
 ```
 
+The `config` method uses the `RuntimeContext` to initialize the `dbHost`, `dbUser`, and `dbPassword` variables. String optionals are used to set default variables just in case the variables we are looking for are not set. Similar methods could be created if more configuration is required.
+
+Completing the code changes above produces the output shown above where `DB_HOST_URL` has been set to `//myhost/mydb`.  
+
 
 ## Add the Function Variables and Retest
+With our function setup and deployed, let's add some function variables to see if our output changes. Add the `DB_USER` and `DB_PASSWORD` variables to your function variable space and re-test your function.
 
-(5) At the application level, configure the `DB_USER` variable.
+(1) Add the `DB_USER` variable to the `java-cfg-fn` function.
 
+![User input icon](images/userinput.png)
 ```sh
-% fn config app connection-app DB_USER superadmin
+% fn cf f cfg-app java-cfg-fn DB_USER mydbuser
 ```
 
-(6) Deploy the application.
+(2) Verify the value has been added.
 
+![User input icon](images/userinput.png)
 ```sh
-% fn deploy --app connection-app --local
+% fn ls cf f cfg-app java-cfg-fn
+KEY	VALUE
+DB_USER	mydbuser
 ```
-(7) At the function level, configure the `DB_PASSWORD` environment variable.
 
+(3) Add the `DB_PASSWORD` variable to the `java-cfg-fn` function.
+
+![User input icon](images/userinput.png)
 ```sh
-% fn config function connection-app connection DB_PASSWORD superadmin
+% fn cf f cfg-app java-cfg-fn DB_PASSWORD mydbpassword
 ```
 
-(8) Invoke the `connection` function.
+(4) Verify the value has been added.
 
+![User input icon](images/userinput.png)
 ```sh
-% fn invoke connection-app connection
-driver: mysqlDriver; url: jdbc:mysql; user: superadmin; password: superadmin
+% fn ls cf f cfg-app java-cfg-fn
+KEY		VALUE
+DB_PASSWORD	mydbpassword
+DB_USER		mydbuser
 ```
 
-## Code walkthrough: Should move before steps
+(9) Invoke your function again.
 
-### Add func.yaml
-
-
-### Update Function for new context above
-
-
-
-The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
-It is set to `com.example.fn.Connection::getConnection`. The whole class
-`Connection` is shown below:
-
-```java
-package com.example.fn;
-
-import com.fnproject.fn.api.FnConfiguration;
-import com.fnproject.fn.api.RuntimeContext;
-
-
-public class Connection {
-	private String url;
-	private String driver;
-	private String user;
-	private String password;
-
-	@FnConfiguration
-    public void config(RuntimeContext ctx) {
-		//Set value at the application configuration level
-    	url = ctx.getConfigurationByKey("DB_URL")
-    			.orElse("jdbc:oracle");
-    	//Set value in the func.yaml
-    	driver = ctx.getConfigurationByKey("DB_DRIVER")
-    			.orElse("OracleDriver");
-    	//Set value at the application configuration level
-    	user = ctx.getConfigurationByKey("DB_USER")
-    			.orElse("admin");
-    }
-
-
-    public String getUrl() {
-    	return  url;
-    }
-
-
-    public String getDriver() {
-    	return  driver;        
-    }
-
-
-    public String getUser() {
-        return  user;        
-    }
-
-	//Set value at the function configuration level
-    public String getPassword() {
-        password = System.getenv().getOrDefault("DB_PASSWORD", "admin");
-    	return  password;        
-    }
-
-    public String getConnection() {
-    	return "driver: " + getDriver() + "; url: " + url + "; user: " + getUser() + "; password: " + getPassword();
-    }
-}
-
+![User input icon](images/userinput.png)
+```sh
+% fn iv cfg-app java-cfg-fn
 ```
 
-For more information see the [configuration vars documentaion page](https://github.com/fnproject/docs/blob/master/fn/develop/configs.md).
+Your output should be similar to:
+```sh
+Hello world!
+DB Host URL: //myhost/mydb
+DB User: mydbuser
+DB Passwd: mydbpassword
+```
+
+Notice your function immediately picks up and uses the variables. You don't need to redeploy the function or make any other modifications. The variables are picked up and injected into the Docker instance when the function is invoked.
+
+## Summary
+You have set variables using the Fn CLI and then accessed them in a Java function using the application context. Fn makes it easy to store configuration data locally and use it in your functions.
+
+For more information see the [configuration vars documentaion page](https://github.com/fnproject/docs/blob/master/fn/develop/configs.md). See also [Function Configuration and Initialization](https://github.com/fnproject/docs/blob/master/fdks/fdk-java/FunctionConfiguration.md) for other examples of how to access the context in a function.
