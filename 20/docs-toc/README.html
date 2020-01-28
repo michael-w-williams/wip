@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title><img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h2 id="img-srchttpsfnprojectioimagesfn-300x125png-altfn-project-logo-height21-width50-project-documentation"><img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation</h2>
+<p><strong><a href="https://github.com/fnproject/fn#quickstart">Quickstart</a>  |  <a href="https://fnproject.io/tutorials">Tutorials</a>  |   <a href="https://github.com/fnproject/docs">Docs</a>  |  <a href="http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml">API</a></strong></p>
+<p>Fn is an event-driven, open source, <a href="https://github.com/fnproject/docs/blob/master/fn/general/introduction.md">Functions-as-a-Service (FaaS)</a> compute platform that you can run anywhere.</p>
+<h3 id="getting-started">Getting Started</h3>
+<ul>
+<li>
+<p><a href="https://github.com/fnproject/fn#quickstart"><strong>Quickstart Tutorial</strong></a></p>
+</li>
+<li>
+<p><a href="https://fnproject.io/tutorials/install/"><strong>Fn Installation</strong></a></p>
+</li>
+<li>
+<p><strong>Using Fn with Java</strong></p>
+<ul>
+<li><a href="https://fnproject.io/tutorials/JavaFDKIntroduction/">Java Tutorial</a></li>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-java">Examples</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Using Fn with Node.js</strong></p>
+<ul>
+<li><a href="https://github.com/fnproject/tutorials/blob/master/node/intro/README.md">Node Tutorial</a></li>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-node">Examples</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Using Fn with Python</strong></p>
+</li>
+<li>
+<p><strong>Creating Functions with Docker</strong></p>
+</li>
+<li>
+<p><a href="https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md"><strong>Logging and Debugging Tutorial</strong></a></p>
+<ul>
+<li><a href="https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md">Function Debugging</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Using Fn with Other Languages</strong></p>
+<ul>
+<li>Go</li>
+<li>Ruby</li>
+<li>C# (Community Supported)</li>
+</ul>
+</li>
+</ul>
+<p>Official:</p>
+<ul>
+<li><a href="Introduction/README.md">Go</a></li>
+<li><a href="ruby/intro/README.md">Ruby</a></li>
+<li><a href="python/intro/README.md">Python</a></li>
+</ul>
+<p>Community Supported:</p>
+<ul>
+<li><a href="csharp/intro/README.md">C#</a></li>
+</ul>
+<h2 id="fn-reference-docs">Fn Reference Docs</h2>
+<ul>
+<li><a href="fn/develop/apps.md">Fn Applications</a>: How to group functions together in an application.</li>
+<li><a href="http://fnproject.io/tutorials">Fn Tutorials</a> for step-by-step guides to creating apps with Fn. These tutorials range from introductory to more advanced.</li>
+<li><a href="fn/develop/configs.md">Config Vars for Functions</a>: How to set configuration variables for applications, functions, or in <code>func.yaml</code>.</li>
+<li><a href="fn/develop/func-file.md">Fn Function File Format</a>: All the values that can be used in <code>func.yaml</code>.</li>
+<li><a href="fn/develop/fdks.md">Fn FDKs</a>: Function Development Kits for supported languages.</li>
+<li><a href="fn/develop/running-fn-client-windows.md">Windows: Running Fn Client for Windows</a>: Run the Fn client on Microsoft Windows.</li>
+<li><a href="fn/develop/triggers.md">Triggers</a>: Using triggers.</li>
+<li><a href="fn/troubleshoot/README.md">Troubleshooting</a>: Solutions to common problems when working with Fn.
+<ul>
+<li>Known Issue: <a href="fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md">Trying to invoke a function when using a CentOS based Linux fails with an error message</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>FDK for Java
+<ul>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/configuration-variables">Configuration Variables</a>: Set configuration values for applications, function, and in <code>func.yaml</code>.</li>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/gradle-build">Gradle Build</a>: Use a function to build and run a Java app using Gradle.</li>
+<li><a href="https://github.com/fnproject/docs/blob/master/fdks/fdk-java/examples/qr-code/README.md">QR Code</a>: Generate QR Codes from data passed to the function.</li>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/regex-query">Regex</a>: Pass a regex to a function.</li>
+<li><a href="https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/string-reverse">Simple Reverse String</a>: Reverse the letters in a string.</li>
+</ul>
+</li>
+</ul>
+<h3 id="learn-more">Learn More</h3>
+<ul>
+<li><a href="http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml">Fn API Reference</a></li>
+<li><a href="fn/develop/clients.md">API Clients</a></li>
+<li><a href="cli/README.md">CLI Docs and Reference</a>
+<ul>
+<li><a href="fn/operate/context-commands.md">CLI Context Commands</a></li>
+</ul>
+</li>
+<li><a href="fn/develop/packaging.md">Packaging functions</a></li>
+<li><a href="fn/general/faq.md">FAQ</a></li>
+<li><a href="fn/develop/pagination.md">Pagination</a></li>
+</ul>
+<h2 id="for-operators">For Operators</h2>
+<p>If you are operating Fn, this section is for you.</p>
+<h3 id="getting-started-1">Getting Started</h3>
+<ul>
+<li><a href="fn/operate/production.md">Running in Production</a></li>
+<li><a href="fn/operate/logging.md">Logging</a></li>
+<li><a href="fn/operate/message-queues.md">Message Queues</a></li>
+<li><a href="fn/operate/metrics.md">Metrics</a></li>
+<li><a href="fn/operate/ui.md">User Interface</a></li>
+</ul>
+<h3 id="learn-more-1">Learn More</h3>
+<ul>
+<li><a href="fn/operate/docker.md">Docker Configuration</a></li>
+<li><a href="fn/operate/extending.md">Extending Fn</a></li>
+<li><a href="https://github.com/fnproject/fn-helm/">Kubernetes Helm Chart for Fn</a></li>
+<li><a href="fn/operate/windows.md">Operating on Windows</a></li>
+<li><a href="fn/operate/private_registries.md">Private Registries</a></li>
+<li><a href="fn/operate/options.md">Runtime Options</a></li>
+</ul>
+<h2 id="for-contributors">For Contributors</h2>
+<p>We love contributions! To get started, please visit our <a href="/community/README.md">community page</a> and <a href="community/CONTRIBUTING.md">contributing guidelines</a> page.</p>
+<h2 id="other-resources">Other Resources</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/fn">Ask your question on StackOverflow</a> and tag it with <code>fn</code></li>
+<li>Join our <a href="http://slack.fnproject.io">Slack Community</a></li>
+<li>Join us at one of our <a href="http://events.fnproject.io">Fn Events</a> or even speak at one!</li>
+<li>For a full presentation with lots of content you can use in your own presentations, see <a href="http://deck.fnproject.io">The Fn Project Presentation Master</a></li>
+<li>Check out our sub-projects: <a href="https://github.com/fnproject/flow">Flow</a>, <a href="https://github.com/fnproject/ui">UI</a></li>
+</ul>
+<h2 id="stay-informed">Stay Informed</h2>
+<ul>
+<li><a href="https://medium.com/fnproject">Blog</a></li>
+<li><a href="https://twitter.com/fnproject">Twitter</a></li>
+<li><a href="https://www.youtube.com/channel/UCo3fJqEGRx9PW_ODXk3b1nw">YouTube</a></li>
+<li><a href="http://events.fnproject.io">Events</a></li>
+</ul>
+
+    </body>
+    </html>

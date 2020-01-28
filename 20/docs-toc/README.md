@@ -1,22 +1,39 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation
 
+**[Quickstart](https://github.com/fnproject/fn#quickstart)&nbsp; | &nbsp;[Tutorials](https://fnproject.io/tutorials)&nbsp; |  &nbsp;[Docs](https://github.com/fnproject/docs)&nbsp; | &nbsp;[API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)**
+
+
 Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere. 
 
-## Getting Started
+### Getting Started
 * [**Quickstart Tutorial**](https://github.com/fnproject/fn#quickstart)
-* [**Logging and Debugging Tutorial**](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
-    * [Function Debugging](https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md)
+* [**Fn Installation**](https://fnproject.io/tutorials/install/)
 * **Using Fn with Java**
-    * [Java Tutorial](https://github.com/fnproject/tutorials/blob/master/JavaFDKIntroduction/README.md)
+    * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
     * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
 * **Using Fn with Node.js**
+    * [Node Tutorial](https://github.com/fnproject/tutorials/blob/master/node/intro/README.md)
+    * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-node)
+* **Using Fn with Python**
+
+
+* **Creating Functions with Docker**
+
+
+
+* [**Logging and Debugging Tutorial**](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
+    * [Function Debugging](https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md)
+
+
+* **Using Fn with Other Languages**
+    * Go
+    * Ruby
+    * C# (Community Supported)
 
 
 Official:
 
 * [Go](Introduction/README.md)
-* [Java](JavaFDKIntroduction//README.md)
-* [Node.js](node/intro/README.md)
 * [Ruby](ruby/intro/README.md)
 * [Python](python/intro/README.md)
 
