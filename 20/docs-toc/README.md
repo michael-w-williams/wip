@@ -3,18 +3,19 @@
 **[Quickstart](https://github.com/fnproject/fn#quickstart)&nbsp; | &nbsp;[Tutorials](https://fnproject.io/tutorials)&nbsp; |  &nbsp;[Docs](https://github.com/fnproject/docs)&nbsp; | &nbsp;[API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)**
 
 
-Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere. 
+Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere.
+
 
 ### Getting Started
-* [**Quickstart Tutorial**](https://github.com/fnproject/fn#quickstart)
-* [**Fn Installation**](https://fnproject.io/tutorials/install/)
+* **[Quickstart Tutorial](https://github.com/fnproject/fn#quickstart)**
+* **[Fn Installation](https://fnproject.io/tutorials/install/)**
 * **Using Fn with Java**
     * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
     * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
 * **Using Fn with Node.js**
     * [Node Tutorial](https://github.com/fnproject/tutorials/blob/master/node/intro/README.md)
     * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-node)
-* **Using Fn with Python**
+* **Using Fn with Python**  
 
 
 * **Creating Functions with Docker**
@@ -44,10 +45,8 @@ Community Supported:
 
 
 
-## Fn Reference Docs
-
+## Fn Key Concepts
 * [Fn Applications](fn/develop/apps.md): How to group functions together in an application.
-* [Fn Tutorials](http://fnproject.io/tutorials) for step-by-step guides to creating apps with Fn. These tutorials range from introductory to more advanced.
 * [Config Vars for Functions](fn/develop/configs.md): How to set configuration variables for applications, functions, or in `func.yaml`.
 * [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
 * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
@@ -56,14 +55,6 @@ Community Supported:
 * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
     * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
 
-
-### Examples
-* FDK for Java
-    * [Configuration Variables](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/configuration-variables): Set configuration values for applications, function, and in `func.yaml`.
-    * [Gradle Build](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/gradle-build): Use a function to build and run a Java app using Gradle.
-    * [QR Code](https://github.com/fnproject/docs/blob/master/fdks/fdk-java/examples/qr-code/README.md): Generate QR Codes from data passed to the function.
-    * [Regex](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/regex-query): Pass a regex to a function.
-    * [Simple Reverse String](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/string-reverse): Reverse the letters in a string.
 
 
 ### Learn More
@@ -75,12 +66,7 @@ Community Supported:
 * [FAQ](fn/general/faq.md)
 * [Pagination](fn/develop/pagination.md)
 
-## For Operators
-
-If you are operating Fn, this section is for you.
-
-### Getting Started
-
+## Tips for Running Fn
 * [Running in Production](fn/operate/production.md)
 * [Logging](fn/operate/logging.md)
 * [Message Queues](fn/operate/message-queues.md)
@@ -102,10 +88,9 @@ We love contributions! To get started, please visit our [community page](/commun
 
 
 
-## Other Resources
-
-* [Ask your question on StackOverflow](https://stackoverflow.com/questions/tagged/fn) and tag it with `fn`
-* Join our [Slack Community](http://slack.fnproject.io)
+## Stay Connected to Fn
+**| [StackOverflow](https://stackoverflow.com/questions/tagged/fn)&nbsp; | [Slack Community](http://slack.fnproject.io)&nbsp; |** 
+* Join our 
 * Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
 * For a full presentation with lots of content you can use in your own presentations, see [The Fn Project Presentation Master](http://deck.fnproject.io)
 * Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
