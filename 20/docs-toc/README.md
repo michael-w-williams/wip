@@ -1,33 +1,40 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation
 
-## Welcome
-Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere. Some of its key features:
+Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere. 
 
-* Open Source
-* Native Docker: use any Docker container as your Function
-* Supports all languages
-* Run anywhere: Public, private and hybrid clouds
-* Easy to use for developers
-* Easy to manage for operators
-* Written in Go
-* Simple yet powerful extensibility
+## Getting Started
+* [**Quickstart Tutorial**](https://github.com/fnproject/fn#quickstart)
+* [**Logging and Debugging Tutorial**](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
+    * [Function Debugging](https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md)
+* **Using Fn with Java**
+    * [Java Tutorial](https://github.com/fnproject/tutorials/blob/master/JavaFDKIntroduction/README.md)
+    * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
+* **Using Fn with Node.js**
 
-The fastest way to experience Fn is to follow the quickstart below, or you can jump right to our [full documentation](https://github.com/fnproject/docs), [API Docs](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml), or hit us up in our [Slack Community](http://slack.fnproject.io) or [Community Page](https://github.com/fnproject/docs/tree/master/community/README.md)!
 
-If you are new to serverless in general, you might find our [introduction](fn/general/introduction.md) useful.
+Official:
 
-## For Developers
+* [Go](Introduction/README.md)
+* [Java](JavaFDKIntroduction//README.md)
+* [Node.js](node/intro/README.md)
+* [Ruby](ruby/intro/README.md)
+* [Python](python/intro/README.md)
 
-If you are a developer using Fn, this section is for you. For operating Fn, see the next section "For Operators".
+Community Supported:
 
-### Getting Started
-* [Quickstart](https://github.com/fnproject/fn#quickstart)
-* Visit [Fn tutorials](http://fnproject.io/tutorials) for step-by-step guides to creating apps with Fn. These tutorials range from introductory to more advanced.
-* [Applications](fn/develop/apps.md): How to group functions together in an application.
+* [C#](csharp/intro/README.md)
+
+
+
+
+## Fn Reference Docs
+
+* [Fn Applications](fn/develop/apps.md): How to group functions together in an application.
+* [Fn Tutorials](http://fnproject.io/tutorials) for step-by-step guides to creating apps with Fn. These tutorials range from introductory to more advanced.
 * [Config Vars for Functions](fn/develop/configs.md): How to set configuration variables for applications, functions, or in `func.yaml`.
-* [Function file](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
+* [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
 * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
-* [Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
+* [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
 * [Triggers](fn/develop/triggers.md): Using triggers.
 * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
     * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
@@ -43,7 +50,7 @@ If you are a developer using Fn, this section is for you. For operating Fn, see 
 
 
 ### Learn More
-* [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
+* [Fn API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
 * [API Clients](fn/develop/clients.md)
 * [CLI Docs and Reference](cli/README.md)
     * [CLI Context Commands](fn/operate/context-commands.md)
@@ -87,7 +94,7 @@ We love contributions! To get started, please visit our [community page](/commun
 * Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
 
 
-### Stay Informed
+## Stay Informed
 
 * [Blog](https://medium.com/fnproject)
 * [Twitter](https://twitter.com/fnproject)
