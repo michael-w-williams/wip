@@ -6,43 +6,28 @@
 Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere.
 
 
-### Getting Started
-* **[Quickstart Tutorial](https://github.com/fnproject/fn#quickstart)**
-* **[Fn Installation](https://fnproject.io/tutorials/install/)**
-* **Using Fn with Java**
+## Getting Started
+* [Quickstart Tutorial](https://github.com/fnproject/fn#quickstart)
+* [Fn Installation](https://fnproject.io/tutorials/install/)
+* Using Fn with Java
     * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
-    * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
-* **Using Fn with Node.js**
+    * [Java Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
+* Using Fn with Node.js
     * [Node Tutorial](https://github.com/fnproject/tutorials/blob/master/node/intro/README.md)
-    * [Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-node)
-* **Using Fn with Python**  
-
-
-* **Creating Functions with Docker**
-
-
-
-* [**Logging and Debugging Tutorial**](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
+    * [Node Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-node)
+* Using Fn with Python
+    * [Python Tutorial](https://fnproject.io/tutorials/python/intro/)
+    * [Python Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-python)
+* Creating Functions with Docker
+    * [Create a Function with a Docker Container](https://fnproject.io/tutorials/ContainerAsFunction/)
+    * [Create a Function from a Docker image that contains a Node.js app with Oracle DB Support](https://fnproject.io/tutorials/node/custom-db/)
+    * [Create a Function with a Linux Command and HotWrap](https://fnproject.io/tutorials/docker/CustomLinuxContainer/)
+* [Logging and Debugging Tutorial](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
     * [Function Debugging](https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md)
-
-
-* **Using Fn with Other Languages**
-    * Go
-    * Ruby
-    * C# (Community Supported)
-
-
-Official:
-
-* [Go](Introduction/README.md)
-* [Ruby](ruby/intro/README.md)
-* [Python](python/intro/README.md)
-
-Community Supported:
-
-* [C#](csharp/intro/README.md)
-
-
+* Using Fn with Other Languages
+    * [Using Fn with C# (Community Supported)](https://fnproject.io/tutorials/csharp/intro/)
+    * [Using Fn with Go](https://fnproject.io/tutorials/Introduction/)
+    * [Using Fn with Ruby](https://fnproject.io/tutorials/ruby/intro/)
 
 
 ## Fn Key Concepts
@@ -82,23 +67,16 @@ Community Supported:
 * [Private Registries](fn/operate/private_registries.md)
 * [Runtime Options](fn/operate/options.md)
 
-## For Contributors
-
-We love contributions! To get started, please visit our [community page](/community/README.md) and [contributing guidelines](community/CONTRIBUTING.md) page.
-
-
-
-## Stay Connected to Fn
-**| [StackOverflow](https://stackoverflow.com/questions/tagged/fn)&nbsp; | [Slack Community](http://slack.fnproject.io)&nbsp; |** 
-* Join our 
-* Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
-* For a full presentation with lots of content you can use in your own presentations, see [The Fn Project Presentation Master](http://deck.fnproject.io)
 * Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
 
 
-## Stay Informed
+## For Contributors
+We love contributions! To get started, please visit our [community page](/community/README.md) and [contributing guidelines](community/CONTRIBUTING.md) page.
 
-* [Blog](https://medium.com/fnproject)
-* [Twitter](https://twitter.com/fnproject)
-* [YouTube](https://www.youtube.com/channel/UCo3fJqEGRx9PW_ODXk3b1nw)
-* [Events](http://events.fnproject.io)
+## Stay Connected to Fn
+**| [StackOverflow](https://stackoverflow.com/questions/tagged/fn)&nbsp; | [Slack Community](http://slack.fnproject.io)&nbsp; | 
+[Blog](https://medium.com/fnproject)&nbsp; | 
+[Twitter](https://twitter.com/fnproject)&nbsp; |
+[YouTube](https://www.youtube.com/channel/UCo3fJqEGRx9PW_ODXk3b1nw)&nbsp; |
+[Events](http://events.fnproject.io)&nbsp; | 
+[The Fn Project Presentation Master](http://deck.fnproject.io)&nbsp; |** 
