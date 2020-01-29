@@ -9,6 +9,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
 ## Getting Started
 * [Quickstart Tutorial](https://github.com/fnproject/fn#quickstart)
 * [Fn Installation](https://fnproject.io/tutorials/install/)
+* [Fn Introduction](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md)
 * Using Fn with Java
     * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
     * [Java Examples](https://github.com/fnproject/docs/tree/master/fdks/fdk-java)
@@ -36,8 +37,10 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
 * Popular Fn Topics
     * [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
     * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
+    * [Fn Runtime Options](https://github.com/fnproject/docs/blob/master/fn/operate/options.md)
     * [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
     * Fn Sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
+    * [Running Fn in Production](https://github.com/fnproject/docs/blob/master/fn/operate/production.md)
     * [Triggers](fn/develop/triggers.md): Using triggers.
     * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
         * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
