@@ -29,22 +29,22 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Using Fn with C# (Community Supported)](https://fnproject.io/tutorials/csharp/intro/)
     * [Using Fn with Go](https://fnproject.io/tutorials/Introduction/)
     * [Using Fn with Ruby](https://fnproject.io/tutorials/ruby/intro/)
+* Exploring Fn
+    * [Create Apps with Fn](https://fnproject.io/tutorials/Apps/)
+    * [Fn Dev with Muliple Contexts](https://fnproject.io/tutorials/basics/UsingContexts/)
+    * [Using the Fn RuntimeContext with Functions](https://fnproject.io/tutorials/basics/UsingRuntimeContext/)
+* Popular Fn Topics
+    * [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
+    * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
+    * [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
+    * Fn Sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
+    * [Triggers](fn/develop/triggers.md): Using triggers.
+    * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
+        * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
+    * [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
 
 
-## Fn Key Concepts
-* [Fn Applications](fn/develop/apps.md): How to group functions together in an application.
-* [Config Vars for Functions](fn/develop/configs.md): How to set configuration variables for applications, functions, or in `func.yaml`.
-* [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
-* [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
-* [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
-* Fn Sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
-* [Triggers](fn/develop/triggers.md): Using triggers.
-* [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
-    * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
-* [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
-
-
-## Other Fn Docs
+## More Fn Docs
 **| [APIs](https://github.com/fnproject/docs/blob/master/fn/develop/README.md#advanced)&nbsp; | 
 [CLI Docs and Reference](https://github.com/fnproject/docs/tree/master/cli)&nbsp; | 
 [Fn Tips for Developers](https://github.com/fnproject/docs/tree/master/fn/develop)&nbsp; | 
