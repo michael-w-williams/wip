@@ -24,6 +24,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Create a Function with a Linux Command and HotWrap](https://fnproject.io/tutorials/docker/CustomLinuxContainer/)
 * [Logging and Debugging Tutorial](https://github.com/fnproject/tutorials/blob/master/Troubleshooting/README.md)
     * [Function Debugging](https://github.com/fnproject/docs/blob/master/fn/troubleshoot/debug-loglevel.md)
+    * [FAQ](fn/general/faq.md)
 * Using Fn with Other Languages
     * [Using Fn with C# (Community Supported)](https://fnproject.io/tutorials/csharp/intro/)
     * [Using Fn with Go](https://fnproject.io/tutorials/Introduction/)
@@ -35,43 +36,24 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
 * [Config Vars for Functions](fn/develop/configs.md): How to set configuration variables for applications, functions, or in `func.yaml`.
 * [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
 * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
-* [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
+* [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
+* Fn Sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
 * [Triggers](fn/develop/triggers.md): Using triggers.
 * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
     * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
+* [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
 
 
-
-### Learn More
-* [Fn API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
-* [API Clients](fn/develop/clients.md)
-* [CLI Docs and Reference](cli/README.md)
-    * [CLI Context Commands](fn/operate/context-commands.md)
-* [Packaging functions](fn/develop/packaging.md)
-* [FAQ](fn/general/faq.md)
-* [Pagination](fn/develop/pagination.md)
-
-## Tips for Running Fn
-* [Running in Production](fn/operate/production.md)
-* [Logging](fn/operate/logging.md)
-* [Message Queues](fn/operate/message-queues.md)
-* [Metrics](fn/operate/metrics.md)
-* [User Interface](fn/operate/ui.md)
-
-### Learn More
-
-* [Docker Configuration](fn/operate/docker.md)
-* [Extending Fn](fn/operate/extending.md)
-* [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
-* [Operating on Windows](fn/operate/windows.md)
-* [Private Registries](fn/operate/private_registries.md)
-* [Runtime Options](fn/operate/options.md)
-
-* Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
+## Other Fn Docs
+**| [APIs](https://github.com/fnproject/docs/blob/master/fn/develop/README.md#advanced)&nbsp; | 
+[CLI Docs and Reference](https://github.com/fnproject/docs/tree/master/cli)&nbsp; | 
+[Fn Tips for Developers](https://github.com/fnproject/docs/tree/master/fn/develop)&nbsp; | 
+[Fn Tips for Operators](https://github.com/fnproject/docs/blob/master/fn/operate/README.md)&nbsp; |**
 
 
 ## For Contributors
 We love contributions! To get started, please visit our [community page](/community/README.md) and [contributing guidelines](community/CONTRIBUTING.md) page.
+
 
 ## Stay Connected to Fn
 **| [StackOverflow](https://stackoverflow.com/questions/tagged/fn)&nbsp; | [Slack Community](http://slack.fnproject.io)&nbsp; | 
